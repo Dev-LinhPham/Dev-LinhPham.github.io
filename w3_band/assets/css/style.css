@@ -1,0 +1,410 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif; /*font chữ*/
+}
+
+.clear{
+    clear: both;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.mt-8{
+    margin-top: 8px;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.col-haft{
+    width: 50%;
+}
+
+.col-third{
+    width: 33.33333%;
+}
+
+.text-white{
+    color:  #fff;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.btn{
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    line-height: 1.5;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#main {
+
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 46px;
+    background-color: #000;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav li a{
+    color: #000;
+    text-decoration: none; /*Bỏ gạch chân*/
+    line-height: 46px; /*Căn giữa chữ*/
+    padding: 0 24px;
+}
+
+#nav > li > a{
+    text-transform: uppercase;
+}
+#nav >li:hover >a,
+.subnav li:hover a {
+    color:  #000 !important;
+    background-color: #ccc !important;
+    display: block;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+    display: none;
+    background-color: #fff;  
+    position: absolute;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+}
+
+#nav .nav-arrow-down{
+    font-size: 13px;
+}
+#nav > li > a{
+    color: #fff;
+}
+
+#nav .subnav a{
+    padding: 0 16px;
+    line-height: 40px;
+}
+
+#header .search-btn{
+    
+    float: right;   /* bỏ tính kế thừa chiều ngang của thẻ div */
+    line-height: 46px;
+    padding: 0 31px;
+    
+}
+
+#header .search-btn:hover{
+    background-color: #f44336!important;
+    cursor: pointer; /*hình trỏ chuột*/
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 15px;
+    
+}
+
+#slider {
+    background-color: #333;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/w3_band/assets/img/slider/slider1.jpg') no-repeat top center / cover;
+    position: relative;
+}
+
+#slider .text-content{
+    /* background-color: #fff; */
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    padding: 32px 0;
+    width: 100%; /*left:0; right:0; Có nhiều cách căn giữa ở khóa html, css tips*/
+    text-align: center;
+}
+
+#slider .text-heading{
+    padding: 10px 0;
+    font-weight: 410; /*độ dày chữ*/
+    font-size: 24px;
+}
+
+#slider .text-dercription{
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    /* text-align: center; */
+    margin: 0 360px;
+    padding: 64px 16px 96px;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px; /*giãn chữ*/
+    margin: 10px 0 ;
+    line-height: 45px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.6; /*độ trong suốt chữ*/
+    line-height: 1.5;
+}
+
+#content .about-content{
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-list{
+    padding-top: 32px;
+    display: inline-block;
+}
+
+#content .member-list .member-name{
+    font-size: 15px;
+    margin: 15px 0;
+    
+}
+#content .member-img{
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}    
+
+.tour-selection{
+    background-color: #000;
+    height: 845px;
+}
+
+.tour-selection .section-heading{
+    color: #fff;
+}
+
+.tour-selection .section-sub-heading{
+    color: #fff;
+}
+
+.tickets-list{
+    background-color: #fff;
+}
+
+.tickets-list li{
+    width: 766px;
+    height: 40px;
+    line-height: 23px;
+    color: #757575;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+}
+
+.tickets-list .sold-out{
+    color: #fff;
+    background-color: #f44336;
+    padding: 0 8px;
+    margin-left: 16px;
+    display: inline-block;
+}
+
+.tickets-list .quantity{
+    color: #fff;
+    background-color: #000;
+    float: right;
+    padding: 0 8px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+/* Places */
+
+.places-list{
+    padding-top: 32px;
+    display: inline-block;
+}
+
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    background-color: #fff;
+    padding: 0.15px 16px;
+    display: block;
+    font-size: 15px;
+}
+
+.place-heading{
+    font-size: 15px;
+    margin: 15px 0;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.place-time{ 
+    opacity: 0.6;
+    line-height: 1.5;
+    margin: 15px 0;
+    
+}
+
+.place-dercription{
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+
+/* Contact */
+.contact-content{
+    padding-top: 32px;
+}
+
+.contact-infor{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-infor i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form .form-control{
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .font-submit-btn{
+    padding: 11px 17px;
+    border: none;
+    background-color: #000;
+    float: right;
+    color: #fff;
+}
+
+.contact-form .font-submit-btn:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+/* Map selection */
+.map-selection img{
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+/* Footer */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list{
+    font-size: 24px;
+}
+
+#footer .socials-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright{
+    font-size: 15px;
+    margin: 15px 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
+}
+
